@@ -19,4 +19,6 @@ public:
     void add(int item);
     void push_back(int item);
     void shrink();
+    int* resize(double ratio);
+    
 };
