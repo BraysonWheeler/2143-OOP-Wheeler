@@ -71,8 +71,8 @@ int myVector::pop_back(){
         return 0;
     }
     else if(percentfull() <= vSize*.4){
-        cout <<"shrinking";
-        shrink();
+        cout <<"shrinking" << endl;
+        resize(.5);
         return theVector[index--];
     }
     else{
@@ -89,15 +89,7 @@ int myVector::pop_back(){
 
 void myVector::push_back(int item){
     if (index >= vSize){
-        vSize = vSize*1.5;
-        int *newarray = new int[vSize];
-        for(int i = 0; i < vSize;i++){
-            newarray[i] = theVector[i];
-        }
-        max = vSize;
-        theVector = newarray;
-        delete[] theVector;
-        cout << "resizing to " << vSize << endl;
+        resize(1.5);
     }
     
     theVector[index++] = item;
@@ -116,3 +108,28 @@ float myVector::percentfull(){
     return pfull;
 }
 
+/**
+ *  resizes the array to a set decimal grows or shrinks array
+ *
+ *  param () double ratio
+ *  return (int*) dynamic new array full of int.
+ */
+
+
+int* myVector::resize(double ratio){
+    if(vSize == origsize){
+        return 0;
+    }
+    else{
+        vSize = vSize * ratio;
+        int* newarray = new int[vSize/2];
+        for(int i = 0; i < vSize; i++){
+            newarray[i] = theVector[i];
+        }
+        index = vSize;
+        delete[] theVector;
+        return newarray;
+
+    
+    }
+}
