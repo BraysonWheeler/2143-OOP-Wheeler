@@ -27,12 +27,13 @@ int main() {
     V.print();
     // Creating new array to fill
     myVector B(10);
-    for(int i = 0;i < 10000;i++){
+    for(int i = 0;i < 1000;i++){
         B.push_back(i);
     }
     
     cout << "Vector size is " << B.vSize << endl;
-    //   for(int i = 0;i < 5;i++){
-    //       B.pop_back();
-    //   }
+       for(int i = 0;i < 997;i++){
+           B.pop_back();
+       }
+    B.print();
 }
