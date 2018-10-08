@@ -1,4 +1,12 @@
-
+/**
+ *  Course: CMPS 2143 - OOP
+ *  Assignment: A04
+ *  Purpose: Framerate example using SFML graphics
+ *
+ *  @author Logan Wheeler 
+ *  @version 1.1 10/04/18
+ *  @github: BraysonWheeler
+ */
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
