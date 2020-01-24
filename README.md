@@ -1,2 +1,2 @@
-Logan Wheeler
-lbw98att@gmail.com
+# Logan Wheeler
+# Loganwheeler@my.unt.edu
